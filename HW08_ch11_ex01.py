@@ -10,7 +10,16 @@
 
 # Body
 def store_to_dict():
-    pass
+	count_value = 0
+	words_dict = {}
+	with open("words.txt", "r") as f:
+		for word in f:
+			strip_word = word.strip()
+			words_dict[strip_word] = count_value
+			count_value += 1
+	return words_dict
+
+
 
 
 ###############################################################################
